@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>HoloAI</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="HoloAI – Your intelligent virtual friend, designed to listen, learn, and bring conversations to life.">
+    <meta name="keywords" content="holoai, HoloAI, HoloAI.uk, holoai.uk, holo, vertual friend">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="profile container">
+        <!-- Theme button -->
+        <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+        <div class="profile__container grid">
+            <div class="profile__data">
+                <div class="profile__border">
+                    <div class="profile__perfil">
+                        <!-- Insert your image, according to the example size of the portfolio -->
+                        <img src="assets/img/perfil.png" alt="">
+                    </div>
+                </div>
+
+                <h1 class="profile__name">HoloAI</h1>
+                <h3 class="profile__profession">VIRTUAL FRIEND</h3>
+
+                <ul class="profile__social">
+                    <a href="https://www.google.com/" target="_blank" class="profile__social-link">
+                        <i class="ri-google-line"></i>
+                    </a>
+                     
+                    <a href="https://github.com/" target="_blank" class="profile__social-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+                </ul>
+            </div>
+
+            <!--=============== VOICEBOT CONTAINER ===============-->
+            <div class="voicebot-container">
+                <iframe src="https://app.vectorshift.ai/voicebots/embedded/678af41819c9c2a135ac9690" width="400" height="600" allow="microphone"></iframe>
+            </div>
+        </div>
+    </header>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+        <span class="footer__copy">
+            &#169; 2025 HoloAI | TDKNexus.com | All rights reserved.
+        </span>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== THEME TOGGLE SCRIPT ===============-->
+    <script>
+        // Check if a theme is set in localStorage
+        const themeButton = document.getElementById("theme-button");
+        const body = document.body;
+
+        // Check localStorage for existing theme preference
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-theme"); // Apply dark theme if saved preference is dark
+        }
+
+        // Toggle theme on button click
+        themeButton.addEventListener("click", () => {
+            body.classList.toggle("dark-theme");
+            if (body.classList.contains("dark-theme")) {
+                localStorage.setItem("theme", "dark");  // Save dark theme in localStorage
+            } else {
+                localStorage.setItem("theme", "light"); // Save light theme in localStorage
+            }
+        });
+    </script>
+</body>
+
+</html>
